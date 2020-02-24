@@ -12,7 +12,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://github.com/CoderPraBhu/coderprabhu"
+          href="https://github.com/CoderPraBhu/coderprabhu-ui"
           target="_blank"
           rel="noopener noreferrer"
         >
