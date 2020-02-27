@@ -4,6 +4,7 @@ metadata:
   name: coderprabhu-ui-web
   annotations:
     kubernetes.io/ingress.global-static-ip-name: coderprabhu-ip
+    networking.gke.io/managed-certificates: coderprabhudotcommanagedcert
   labels:
     app: coderprabhu-ui
 spec:
