@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: coderprabhu-ui-app
-        image: gcr.io/kubegcp-256806/coderprabhu-ui:v4
+        image: gcr.io/kubegcp-256806/coderprabhu-ui:v7
         ports:
         - containerPort: 8080

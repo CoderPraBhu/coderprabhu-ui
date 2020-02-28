@@ -1,4 +1,4 @@
-This repository holds code and configurations for http://coderprabhu.com
+This repository holds code and configurations for https://coderprabhu.com
 
 Git Repo: https://github.com/CoderPraBhu/coderprabhu
 

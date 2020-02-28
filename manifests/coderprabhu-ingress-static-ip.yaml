@@ -3,8 +3,10 @@ kind: Ingress
 metadata:
   name: coderprabhu-ui-web
   annotations:
+    kubernetes.io/ingress.allow-http: "false"
     kubernetes.io/ingress.global-static-ip-name: coderprabhu-ip
     networking.gke.io/managed-certificates: coderprabhudotcommanagedcert
+    networking.gke.io/managed-certificates: coderprabhuwwwdotcommanagedcert
   labels:
     app: coderprabhu-ui
 spec:
