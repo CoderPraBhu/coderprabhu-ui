@@ -15,7 +15,7 @@ function ExternalLink(props) {
         >
           <img 
             alt='logo' 
-            class='github-icon'
+            className='github-icon'
             src={props.logo} 
             />
           {props.description} 
