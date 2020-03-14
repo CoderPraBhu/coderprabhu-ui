@@ -6,8 +6,8 @@ export default class HelloMessage extends React.Component {
     message: ""
   }
   componentDidMount(){
-   // axios.get(`https://api.coderprabhu.com`)
-    axios.get(`http://localhost:8080/hello`)
+    //    axios.get(`http://localhost:8080/hello`)
+    axios.get(`https://api.coderprabhu.com/hello`)
       .then(response => {
         console.log(response);
         const message = response.data;

@@ -12,8 +12,8 @@ npx create-react-app coderprabhu-ui
 After making any changes, update following command with new version number.
 Execute to build the image and push it:  
 ````
-docker build -t gcr.io/kubegcp-256806/coderprabhu-ui:v8 .  
-docker push gcr.io/kubegcp-256806/coderprabhu-ui:v8  
+docker build -t gcr.io/kubegcp-256806/coderprabhu-ui:v11 .  
+docker push gcr.io/kubegcp-256806/coderprabhu-ui:v11  
 ````
 You can run the image locally using
 ````

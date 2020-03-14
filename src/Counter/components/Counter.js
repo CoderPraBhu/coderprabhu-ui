@@ -6,9 +6,9 @@ export default class Counter extends React.Component {
     count: ""
   }
   componentDidMount(){
-   // axios.get(`https://api.coderprabhu.com`)
-    axios.get(`http://localhost:8080/count`)
-      .then(response => {
+  // axios.get(`http://localhost:8080/count`)
+    axios.get(`https://api.coderprabhu.com/count`)
+       .then(response => {
         console.log(response);
         const count = response.data;
         this.setState({ count });
