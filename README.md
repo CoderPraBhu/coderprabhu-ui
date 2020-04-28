@@ -4,9 +4,9 @@ This Repo for UI: https://github.com/CoderPraBhu/coderprabhu-ui
 Git Repo for API: https://github.com/CoderPraBhu/coderprabhu-api  
 Git Repo for K8S: https://github.com/CoderPraBhu/coderprabhu-k8s  
 
-Commands:  
+# Commands:  
 The app was created using: 
-````
+```
 npx create-react-app coderprabhu-ui
 ````
 After making any changes, update following command with new version number.
@@ -25,6 +25,7 @@ container image version and execute
 ````
 kubectl apply -f ../../k8s/coderprabhu-k8s/coderprabhu-ui-deployment.yaml  
 ````
+coderprabhu-ui-deployment.yaml is hosted on [coderprabhu-k8s](https://github.com/CoderPraBhu/coderprabhu-k8s) repository [here](https://github.com/CoderPraBhu/coderprabhu-k8s/blob/master/coderprabhu-ui-deployment.yaml)
 Curl commands:   
 ````
 curl http://coderprabhu.com
