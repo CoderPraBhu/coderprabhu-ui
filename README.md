@@ -25,8 +25,8 @@ container image version and execute
 ````
 kubectl apply -f ../../k8s/coderprabhu-k8s/coderprabhu-ui-deployment.yaml  
 ````
-coderprabhu-ui-deployment.yaml is hosted on [coderprabhu-k8s](https://github.com/CoderPraBhu/coderprabhu-k8s) repository [here](https://github.com/CoderPraBhu/coderprabhu-k8s/blob/master/coderprabhu-ui-deployment.yaml)
-Curl commands:   
+coderprabhu-ui-deployment.yaml is hosted on [coderprabhu-k8s](https://github.com/CoderPraBhu/coderprabhu-k8s) repository [here](https://github.com/CoderPraBhu/coderprabhu-k8s/blob/master/coderprabhu-ui-deployment.yaml)  
+# Curl commands:   
 ````
 curl http://coderprabhu.com
 curl https://coderprabhu.com
