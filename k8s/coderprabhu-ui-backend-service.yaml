@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: coderprabhu-ui
+  name: coderprabhu-ui-backend
+  namespace: default
+spec:
+#  clusterIP: 10.27.254.21
+#  externalTrafficPolicy: Cluster
+  ports:
+    - name: httpuiport
+#      nodePort: 30355
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    - name: httpsuiport
+#      nodePort: 30990
+      port: 443
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: coderprabhu-ui
+    tier: web
+  sessionAffinity: None
+  type: NodePort
