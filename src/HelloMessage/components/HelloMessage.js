@@ -16,7 +16,7 @@ export default class HelloMessage extends React.Component {
   }
   render(){
     return (
-      <label>Api says: {this.state.message} </label>
+      <label>Message from backend api: {this.state.message} </label>
     )
   }
 }
