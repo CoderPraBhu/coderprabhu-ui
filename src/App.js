@@ -6,6 +6,7 @@ import LinkedInLink from './ExternalLink/components/LinkedInLink';
 import HelloMessage from './HelloMessage/components/HelloMessage';
 import Counter from './Counter/components/Counter';
 import ReactLogo from './ReactLogo/components/ReactLogo';
+import ReactGA from 'react-ga';
 
 function App() {
   return (
@@ -24,5 +25,9 @@ function App() {
     </div>
   );
 }
+
+const trackingId = "UA-166612018-1"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default App;
