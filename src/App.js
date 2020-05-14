@@ -27,7 +27,7 @@ function App() {
 }
 
 const trackingId = "UA-166612018-1"; // Replace with your Google Analytics tracking ID
-ReactGA.initialize(trackingId);
+ReactGA.initialize(trackingId,{testMode: true});
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default App;
