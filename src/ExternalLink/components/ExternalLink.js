@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../App.css';
 
 //import Logo from '../images/GitHub-Mark-Light-120px-plus.png';
 
@@ -17,8 +18,9 @@ function ExternalLink(props) {
             alt='logo' 
             className='github-icon'
             src={props.logo} 
-            />
-          {props.description} 
+          /> 
+
+          <label>{props.description}</label>
         </a>
     </div>
   );

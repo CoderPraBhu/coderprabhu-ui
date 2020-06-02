@@ -5,6 +5,7 @@ import TwitterLink from './ExternalLink/components/TwitterLink.js';
 import LinkedInLink from './ExternalLink/components/LinkedInLink';
 import HelloMessage from './HelloMessage/components/HelloMessage';
 import Counter from './Counter/components/Counter';
+import Visit from './Visit/components/Visit';
 import ReactLogo from './ReactLogo/components/ReactLogo';
 import ReactGA from 'react-ga';
 
@@ -19,8 +20,10 @@ function App() {
         <GithubLink description = "K8S" link= "https://github.com/CoderPraBhu/coderprabhu-k8s"/>
         <TwitterLink description = "Twitter" link= "https://twitter.com/CoderPraBhu"/>
         <LinkedInLink description = "LinkedIn" link= "https://linkedin.com/in/prashantbhuruk"/>
+        <br/>
         <Counter/>
         <HelloMessage/>
+        <Visit/>
        </header>
     </div>
   );
