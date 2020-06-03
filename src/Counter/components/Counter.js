@@ -7,7 +7,7 @@ export default class Counter extends React.Component {
   }
   componentDidMount(){
   // axios.get(`http://localhost:8080/count`)
-    axios.get(`https://api.coderprabhu.com/count`)
+   axios.get(`https://api.coderprabhu.com/count`)
        .then(response => {
         console.log(response);
         const count = response.data;
@@ -16,7 +16,7 @@ export default class Counter extends React.Component {
   }
   render(){
     return (
-      <label> Count since last restart: {this.state.count} </label>
+      <label> Total visits: {this.state.count} </label>
     )
   }
 }
