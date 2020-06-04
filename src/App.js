@@ -8,6 +8,7 @@ import Counter from './Counter/components/Counter';
 import Visit from './Visit/components/Visit';
 import ReactLogo from './ReactLogo/components/ReactLogo';
 import ReactGA from 'react-ga';
+import VisitUnique from './Visit/components/VisitUnique';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <LinkedInLink description = "LinkedIn" link= "https://linkedin.com/in/prashantbhuruk"/>
         <br/>
         <Counter/>
+        <VisitUnique/>
         <HelloMessage/>
         <Visit/>
        </header>
