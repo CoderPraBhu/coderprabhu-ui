@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import '../../App.css';
+import { API_ROOT } from '../../environments/app-config.js';
 
 export default class VisitUnique extends React.Component {
   state = {
@@ -8,7 +9,7 @@ export default class VisitUnique extends React.Component {
   }
   componentDidMount(){
   // axios.get(`http://localhost:8080/unique`)
-  axios.get(`https://api.coderprabhu.com/unique`)
+  axios.get(`${API_ROOT}/unique`)
        .then(response => {
         console.log(response);
         console.log(response.data);

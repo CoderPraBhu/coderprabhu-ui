@@ -1,13 +1,13 @@
 import React from 'react';
 import axios from 'axios';
+import { API_ROOT } from '../../environments/app-config.js';
 
 export default class HelloMessage extends React.Component {
   state = {
-    message: ""
+    message: "Hi!"
   }
   componentDidMount(){
-    //    axios.get(`http://localhost:8080/hello`)
-    axios.get(`https://api.coderprabhu.com/hello`)
+    axios.get(`${API_ROOT}/hello`)
       .then(response => {
         console.log(response);
         const message = response.data;
