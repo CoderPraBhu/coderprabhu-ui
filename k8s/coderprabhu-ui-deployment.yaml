@@ -23,7 +23,7 @@ spec:
         tier: web
     spec:
       containers:
-        - image: gcr.io/all-projects-292200/github.com/coderprabhu/coderprabhu-ui
+        - image: gcr.io/all-projects-292200/coderprabhu-ui:v14
           imagePullPolicy: IfNotPresent
           name: coderprabhu-ui-app
           ports:

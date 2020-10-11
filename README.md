@@ -24,6 +24,7 @@ To update the k8s deployment with new version, update the ui deployment yaml wit
 container image version and execute
 ````
 kubectl apply -f k8s/coderprabhu-ui-deployment.yaml  
+kubectl apply -f k8s/coderprabhu-ui-backend-service.yaml 
 ````
 coderprabhu-ui-deployment.yaml is hosted on [coderprabhu-k8s](https://github.com/CoderPraBhu/coderprabhu-k8s) repository [here](https://github.com/CoderPraBhu/coderprabhu-k8s/blob/master/coderprabhu-ui-deployment.yaml)  
 # Curl commands:   
@@ -38,5 +39,8 @@ curl https://api.coderprabhu.com
 
 kubectl apply -f k8s/coderprabhu-ui-dot-com-cert.yaml
 kubectl describe -f k8s/coderprabhu-ui-dot-com-cert.yaml
+kubectl delete -f k8s/coderprabhu-ui-dot-com-cert.yaml
+
 kubectl apply -f k8s/coderprabhu-ui-www-dot-com-cert.yaml
 kubectl describe -f k8s/coderprabhu-ui-www-dot-com-cert.yaml
+kubectl delete -f k8s/coderprabhu-ui-www-dot-com-cert.yaml
