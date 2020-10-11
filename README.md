@@ -12,18 +12,18 @@ npx create-react-app coderprabhu-ui
 After making any changes, update following command with new version number.
 Execute to build the image and push it:  
 ````
-docker build -t gcr.io/kubegcp-256806/coderprabhu-ui:v13 .  
-docker push gcr.io/kubegcp-256806/coderprabhu-ui:v13 
+docker build -t gcr.io/all-projects-292200/coderprabhu-ui:v14 .  
+docker push gcr.io/all-projects-292200/coderprabhu-ui:v14 
 ````
 You can run the image locally using
 ````
-docker run --rm -p 8080:8080 gcr.io/kubegcp-256806/coderprabhu-ui:v13 
+docker run --rm -p 8080:8080 gcr.io/all-projects-292200/coderprabhu-ui:v14 
 curl http://localhost:8080
 ````
 To update the k8s deployment with new version, update the ui deployment yaml with new 
 container image version and execute
 ````
-kubectl apply -f ../../k8s/coderprabhu-k8s/coderprabhu-ui-deployment.yaml  
+kubectl apply -f k8s/coderprabhu-ui-deployment.yaml  
 ````
 coderprabhu-ui-deployment.yaml is hosted on [coderprabhu-k8s](https://github.com/CoderPraBhu/coderprabhu-k8s) repository [here](https://github.com/CoderPraBhu/coderprabhu-k8s/blob/master/coderprabhu-ui-deployment.yaml)  
 # Curl commands:   
@@ -35,3 +35,8 @@ curl https://www.coderprabhu.com
 curl http://api.coderprabhu.com
 curl https://api.coderprabhu.com
 ````   
+
+kubectl apply -f k8s/coderprabhu-ui-dot-com-cert.yaml
+kubectl describe -f k8s/coderprabhu-ui-dot-com-cert.yaml
+kubectl apply -f k8s/coderprabhu-ui-www-dot-com-cert.yaml
+kubectl describe -f k8s/coderprabhu-ui-www-dot-com-cert.yaml
