@@ -19,7 +19,7 @@ export default class Visit extends React.Component {
   }
   render(){
     return (
-      <label >Browser: {this.state.whois} </label>
+      <label >You are browsing from: {this.state.whois} </label>
     )
   }
 }
