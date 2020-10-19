@@ -6,16 +6,16 @@ metadata:
   name: coderprabhu-ui-backend
   namespace: default
 spec:
-#  clusterIP: 10.27.254.21
-#  externalTrafficPolicy: Cluster
+  clusterIP: 10.3.252.198
+  externalTrafficPolicy: Cluster
   ports:
     - name: httpuiport
-#      nodePort: 30355
+      nodePort: 32499
       port: 8080
       protocol: TCP
       targetPort: 8080
     - name: httpsuiport
-#      nodePort: 30990
+      nodePort: 32518
       port: 443
       protocol: TCP
       targetPort: 8080
