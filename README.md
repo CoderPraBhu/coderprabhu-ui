@@ -12,12 +12,12 @@ npx create-react-app coderprabhu-ui
 After making any changes, update following command with new version number.
 Execute to build the image and push it:  
 ````
-docker build -t gcr.io/all-projects-292200/coderprabhu-ui:v14 .  
-docker push gcr.io/all-projects-292200/coderprabhu-ui:v14 
+docker build -t gcr.io/all-projects-292200/coderprabhu-ui:v15 .  
+docker push gcr.io/all-projects-292200/coderprabhu-ui:v15 
 ````
 You can run the image locally using
 ````
-docker run --rm -p 8080:8080 gcr.io/all-projects-292200/coderprabhu-ui:v14 
+docker run --rm -p 8080:8080 gcr.io/all-projects-292200/coderprabhu-ui:v15 
 curl http://localhost:8080
 ````
 To update the k8s deployment with new version, update the ui deployment yaml with new 

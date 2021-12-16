@@ -11,8 +11,8 @@ export default class VisitUnique extends React.Component {
   // axios.get(`http://localhost:8080/unique`)
   axios.get(`${API_ROOT}/unique`)
        .then(response => {
-        console.log(response);
-        console.log(response.data);
+        //console.log(response);
+        //console.log(response.data);
         var uniqueVisitorCount = response.data;
         this.setState({uniqueVisitorCount});
       })

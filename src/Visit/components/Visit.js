@@ -10,9 +10,9 @@ export default class Visit extends React.Component {
   componentDidMount(){
     axios.get(`${API_ROOT}/visit`)
        .then(response => {
-        console.log(response);
+        //console.log(response);
         var returnedVal = response.data;
-        console.log(returnedVal);
+        //console.log(returnedVal);
         var whois = returnedVal.device;
         this.setState({whois});
       })
