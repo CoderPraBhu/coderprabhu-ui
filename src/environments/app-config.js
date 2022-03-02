@@ -4,6 +4,8 @@ const hostname = window && window.location && window.location.hostname;
 
 if(hostname === 'coderprabhu.com') {
   backendHost = 'https://api.coderprabhu.com';
+}else if(hostname === 'www.coderprabhu.com') {
+  backendHost = 'https://api.coderprabhu.com';
 } else if(/^qa/.test(hostname)) {
   backendHost = `https://api.${hostname}`;
 } else {
