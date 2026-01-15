@@ -1,0 +1,31 @@
+.header-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(40, 44, 52, 0.7) 0%,
+        rgba(40, 44, 52, 0.4) 50%,
+        rgba(97, 218, 251, 0.15) 100%
+    );
+    pointer-events: none;
+}

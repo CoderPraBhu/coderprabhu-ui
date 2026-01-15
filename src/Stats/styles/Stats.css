@@ -1,17 +1,11 @@
-.github-icon {
-    width: 20px;
-    height: 20px;
-    padding-right: 5px;
-}
-
-/* Link Section Styles */
-.link-section {
+/* Stats Section */
+.stats-section {
     margin: 20px 0;
     width: 100%;
     max-width: 800px;
 }
 
-.link-section-title {
+.stats-section-title {
     color: #61dafb;
     font-size: 1.2rem;
     margin-bottom: 15px;
@@ -20,15 +14,15 @@
     border-left: 3px solid #61dafb;
 }
 
-.link-tiles-container {
+.stats-tiles-container {
     display: flex;
     flex-wrap: nowrap;
     gap: 15px;
     justify-content: center;
 }
 
-/* Link Tile Styles */
-.link-tile {
+/* Stat Tile Styles */
+.stat-tile {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,26 +31,25 @@
     flex: 1 1 0;
     background-color: #3a3f47;
     border-radius: 10px;
-    text-decoration: none;
     color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
-.link-tile:hover {
+.stat-tile:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.link-tile-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-    object-fit: contain;
+.stat-tile-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #61dafb;
+    margin-bottom: 8px;
 }
 
-.link-tile-label {
-    font-size: 0.9rem;
+.stat-tile-label {
+    font-size: 0.85rem;
     text-align: center;
+    opacity: 0.9;
 }

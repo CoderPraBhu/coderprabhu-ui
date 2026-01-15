@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import GithubLink from './ExternalLink/components/GithubLink.js';
-import TwitterLink from './ExternalLink/components/TwitterLink.js';
-import LinkedInLink from './ExternalLink/components/LinkedInLink';
+import LinkSection from './ExternalLink/components/LinkSection';
+import LinkTile from './ExternalLink/components/LinkTile';
+import LogoImages from './ExternalLink/constants/LogoImages';
+import StatsSection from './Stats/components/StatsSection';
 import HelloMessage from './HelloMessage/components/HelloMessage';
 import Counter from './Counter/components/Counter';
 import Visit from './Visit/components/Visit';
-import ReactLogo from './ReactLogo/components/ReactLogo';
+import HeaderImage from './HeaderImage/components/HeaderImage';
 import ReactGA from 'react-ga';
 import VisitUnique from './Visit/components/VisitUnique';
 
@@ -14,19 +15,27 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ReactLogo/>
-        <GithubLink description = "All projects" link= "https://github.com/CoderPraBhu"/>
-        <GithubLink description = "UI" link= "https://github.com/CoderPraBhu/coderprabhu-ui"/>
-        <GithubLink description = "API" link= "https://github.com/CoderPraBhu/coderprabhu-api"/>
-        <GithubLink description = "K8S" link= "https://github.com/CoderPraBhu/coderprabhu-k8s"/>
-        <TwitterLink description = "Twitter" link= "https://twitter.com/CoderPraBhu"/>
-        <LinkedInLink description = "LinkedIn" link= "https://linkedin.com/in/prashantbhuruk"/>
-        <br/>
-        <Counter/>
-        <VisitUnique/>
-        <HelloMessage/>
-        <Visit/>
-       </header>
+        <HeaderImage/>
+
+        <LinkSection title="GitHub Repositories">
+          <LinkTile description="All Projects" link="https://github.com/CoderPraBhu" logo={LogoImages.github} />
+          <LinkTile description="CoderPraBhu.com UI" link="https://github.com/CoderPraBhu/coderprabhu-ui" logo={LogoImages.github} />
+          <LinkTile description="CoderPraBhu.com API" link="https://github.com/CoderPraBhu/coderprabhu-api" logo={LogoImages.github} />
+          <LinkTile description="CoderPraBhu.com K8S" link="https://github.com/CoderPraBhu/coderprabhu-k8s" logo={LogoImages.github} />
+        </LinkSection>
+
+        <LinkSection title="Social">
+          <LinkTile description="Twitter" link="https://twitter.com/CoderPraBhu" logo={LogoImages.twitter} />
+          <LinkTile description="LinkedIn" link="https://linkedin.com/in/prashantbhuruk" logo={LogoImages.linkedIn} />
+        </LinkSection>
+
+        <StatsSection title="Stats">
+          <Counter/>
+          <VisitUnique/>
+          <HelloMessage/>
+          <Visit/>
+        </StatsSection>
+      </header>
     </div>
   );
 }

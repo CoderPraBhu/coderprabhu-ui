@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import '../../App.css';
 import { API_ROOT } from '../../environments/app-config.js';
+import '../../Stats/styles/Stats.css';
 
 export default class Visit extends React.Component {
   state = {
@@ -10,16 +10,20 @@ export default class Visit extends React.Component {
   componentDidMount(){
     axios.get(`${API_ROOT}/visit`)
        .then(response => {
-        //console.log(response);
         var returnedVal = response.data;
-        //console.log(returnedVal);
         var whois = returnedVal.device;
         this.setState({whois});
+      })
+       .catch(error => {
+        console.error('Failed to fetch visit info:', error.message);
       })
   }
   render(){
     return (
-      <label >You are browsing from: {this.state.whois} </label>
+      <div className="stat-tile">
+        <span className="stat-tile-value">{this.state.whois}</span>
+        <span className="stat-tile-label">Your Device</span>
+      </div>
     )
   }
 }
