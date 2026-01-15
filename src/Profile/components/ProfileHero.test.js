@@ -22,7 +22,7 @@ describe('ProfileHero', () => {
 
   test('renders bio text', () => {
     render(<ProfileHero />);
-    expect(screen.getByText(/14\+ years of experience/)).toBeInTheDocument();
+    expect(screen.getByText(/15\+ years of experience/)).toBeInTheDocument();
   });
 
   test('has correct CSS class', () => {

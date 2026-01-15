@@ -12,7 +12,7 @@ function ProfileHero() {
         <h1 className="profile-name">Prashant Bhuruk</h1>
         <h2 className="profile-title">Senior Software Development Engineer</h2>
         <p className="profile-bio">
-          14+ years of experience building scalable distributed systems. Currently leading
+          15+ years of experience building scalable distributed systems. Currently leading
           cloud migrations and re-architecting authentication services at a major San Francisco
           bank, supporting 4M+ users across 150+ applications. Expertise in Java microservices,
           Spring Boot, and Kubernetes.
