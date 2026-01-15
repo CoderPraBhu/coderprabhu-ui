@@ -7,7 +7,7 @@ import StatsSection from './Stats/components/StatsSection';
 import HelloMessage from './HelloMessage/components/HelloMessage';
 import Counter from './Counter/components/Counter';
 import Visit from './Visit/components/Visit';
-import HeaderImage from './HeaderImage/components/HeaderImage';
+import ProfileHero from './Profile/components/ProfileHero';
 import ReactGA from 'react-ga';
 import VisitUnique from './Visit/components/VisitUnique';
 
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <HeaderImage/>
+        <ProfileHero/>
 
         <LinkSection title="GitHub Repositories">
           <LinkTile description="All Projects" link="https://github.com/CoderPraBhu" logo={LogoImages.github} />

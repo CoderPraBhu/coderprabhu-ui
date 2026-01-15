@@ -3,10 +3,10 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('App', () => {
-  test('renders header image', () => {
+  test('renders profile hero', () => {
     const { container } = render(<App />);
-    const headerImage = container.querySelector('.header-image-container');
-    expect(headerImage).toBeInTheDocument();
+    const profileHero = container.querySelector('.profile-hero');
+    expect(profileHero).toBeInTheDocument();
   });
 
   test('renders GitHub Repositories section', () => {
