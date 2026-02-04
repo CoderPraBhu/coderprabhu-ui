@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { API_ROOT } from '../../environments/app-config.js';
 import '../../Stats/styles/Stats.css';
 
@@ -8,12 +7,12 @@ export default class Counter extends React.Component {
     count: "0"
   }
   componentDidMount(){
-   axios.get(`${API_ROOT}/count`)
-       .then(response => {
-        const count = response.data;
+    fetch(`${API_ROOT}/count`)
+      .then(response => response.json())
+      .then(count => {
         this.setState({ count });
       })
-       .catch(error => {
+      .catch(error => {
         console.error('Failed to fetch count:', error.message);
       })
   }

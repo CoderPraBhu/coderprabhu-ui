@@ -1,7 +1,11 @@
+import twitter from '../images/Twitter_Social_Icon_Square_Color.png';
+import github from '../images/GitHub-Mark-Light-120px-plus.png';
+import linkedIn from '../images/LI-In-Bug.png';
+
 const LogoImages = {
-    twitter: require('../images/Twitter_Social_Icon_Square_Color.png'),
-    github: require('../images/GitHub-Mark-Light-120px-plus.png'),
-    linkedIn: require('../images/LI-In-Bug.png'),
+    twitter,
+    github,
+    linkedIn,
 };
 
 export default LogoImages;

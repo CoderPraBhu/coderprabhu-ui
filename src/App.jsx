@@ -8,7 +8,6 @@ import HelloMessage from './HelloMessage/components/HelloMessage';
 import Counter from './Counter/components/Counter';
 import Visit from './Visit/components/Visit';
 import ProfileHero from './Profile/components/ProfileHero';
-import ReactGA from 'react-ga';
 import VisitUnique from './Visit/components/VisitUnique';
 
 function App() {
@@ -39,9 +38,5 @@ function App() {
     </div>
   );
 }
-
-const trackingId = "UA-166612018-1"; // Replace with your Google Analytics tracking ID
-ReactGA.initialize(trackingId,{testMode: true});
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default App;

@@ -1,19 +1,38 @@
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
-import '@testing-library/jest-dom/extend-expect';
-import axios from 'axios';
+import '@testing-library/jest-dom';
+import { vi } from 'vitest';
 
-// Mock axios to prevent network calls during tests
-jest.mock('axios');
+// Mock fetch to prevent network calls during tests
+global.fetch = vi.fn((url) => {
+  if (url.includes('/count')) {
+    return Promise.resolve({
+      json: () => Promise.resolve(0),
+      text: () => Promise.resolve('0')
+    });
+  }
+  if (url.includes('/unique')) {
+    return Promise.resolve({
+      json: () => Promise.resolve(0),
+      text: () => Promise.resolve('0')
+    });
+  }
+  if (url.includes('/hello')) {
+    return Promise.resolve({
+      json: () => Promise.resolve('Hi!'),
+      text: () => Promise.resolve('Hi!')
+    });
+  }
+  if (url.includes('/visit')) {
+    return Promise.resolve({
+      json: () => Promise.resolve({ device: 'Test' }),
+      text: () => Promise.resolve('{"device":"Test"}')
+    });
+  }
+  return Promise.resolve({
+    json: () => Promise.resolve(null),
+    text: () => Promise.resolve('')
+  });
+});
 
 beforeEach(() => {
-  axios.get.mockImplementation((url) => {
-    if (url.includes('/count')) return Promise.resolve({ data: 0 });
-    if (url.includes('/unique')) return Promise.resolve({ data: 0 });
-    if (url.includes('/hello')) return Promise.resolve({ data: 'Hi!' });
-    if (url.includes('/visit')) return Promise.resolve({ data: { device: 'Test' } });
-    return Promise.resolve({ data: null });
-  });
+  vi.clearAllMocks();
 });

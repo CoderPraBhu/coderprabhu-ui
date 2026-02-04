@@ -9,7 +9,7 @@ if(hostname === 'coderprabhu.com') {
 } else if(/^qa/.test(hostname)) {
   backendHost = `https://api.${hostname}`;
 } else {
-  backendHost = process.env.REACT_APP_BACKEND_HOST || 'http://localhost:8080';
+  backendHost = import.meta.env.VITE_BACKEND_HOST || 'http://localhost:8080';
 }
 
 export const API_ROOT = `${backendHost}`

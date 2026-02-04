@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Frontend React application for https://coderprabhu.com. This is a Create React App project that displays social links and visitor statistics fetched from a backend API.
+Frontend React 19 application for https://coderprabhu.com. Built with Vite, this app displays social links and visitor statistics fetched from a backend API.
 
 Related repositories:
 - API: https://github.com/CoderPraBhu/coderprabhu-api
@@ -14,9 +14,11 @@ Related repositories:
 
 ```bash
 npm start          # Run dev server (port 3000)
-npm test           # Run tests in watch mode
+npm run dev        # Alias for npm start
+npm test           # Run tests once with Vitest
+npm run test:watch # Run tests in watch mode
 npm run build      # Production build
-CI=true npm test   # Run tests once (used in Docker build)
+npm run preview    # Preview production build
 ```
 
 ## Architecture
@@ -31,15 +33,17 @@ CI=true npm test   # Run tests once (used in Docker build)
 **API Configuration**: `src/environments/app-config.js` exports `API_ROOT` which determines the backend URL based on hostname:
 - Production (`coderprabhu.com` or `www.coderprabhu.com`) → `https://api.coderprabhu.com`
 - QA (hostnames starting with `qa`) → `https://api.{hostname}`
-- Local development → `REACT_APP_BACKEND_HOST` env var or `http://localhost:8080`
+- Local development → `VITE_BACKEND_HOST` env var or `http://localhost:8080`
 
-**API Calls**: Components use axios to call the backend. Key endpoints:
+**API Calls**: Components use native fetch to call the backend. Key endpoints:
 - `/count` - Returns total visit count
 - `/visit` - Returns visitor device information
+- `/unique` - Returns unique visitor count
+- `/hello` - Returns greeting message
 
 ## Deployment
 
-Multi-stage Docker build using node:14 for build and nginx:1.21.4 for serving. The build runs tests before creating the production bundle. Container exposes port 8080.
+Multi-stage Docker build using node:25-alpine for build and nginx:alpine for serving. The build runs tests before creating the production bundle. Container exposes port 8080.
 
 Build and push:
 ```bash

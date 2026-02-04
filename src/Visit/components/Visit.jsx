@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { API_ROOT } from '../../environments/app-config.js';
 import '../../Stats/styles/Stats.css';
 
@@ -8,13 +7,13 @@ export default class Visit extends React.Component {
     whois: "Your browser"
   }
   componentDidMount(){
-    axios.get(`${API_ROOT}/visit`)
-       .then(response => {
-        var returnedVal = response.data;
-        var whois = returnedVal.device;
-        this.setState({whois});
+    fetch(`${API_ROOT}/visit`)
+      .then(response => response.json())
+      .then(data => {
+        const whois = data.device;
+        this.setState({ whois });
       })
-       .catch(error => {
+      .catch(error => {
         console.error('Failed to fetch visit info:', error.message);
       })
   }
