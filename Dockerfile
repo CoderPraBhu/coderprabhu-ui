@@ -1,5 +1,5 @@
 ###########################
-FROM node:22-alpine as build-stage
+FROM node:25-alpine as build-stage
 ###########################
 WORKDIR /app
 ENV NODE_OPTIONS=--openssl-legacy-provider
