@@ -4,6 +4,15 @@ This Repo for UI: https://github.com/CoderPraBhu/coderprabhu-ui
 Git Repo for API: https://github.com/CoderPraBhu/coderprabhu-api  
 Git Repo for K8S: https://github.com/CoderPraBhu/coderprabhu-k8s  
 
+# Local development:
+The app is built with React and Vite.
+````
+npm install
+npm start      # dev server on http://localhost:3000
+npm test       # run tests once
+npm run build  # production build
+````
+
 # Commands:  
 The app was created using: 
 ```
@@ -15,7 +24,7 @@ Execute to build the image and push it:
 docker build -t gcr.io/all-projects-292200/coderprabhu-ui:v16 .  
 docker push gcr.io/all-projects-292200/coderprabhu-ui:v16 
 ````
-You can run the image locally usingls
+You can run the image locally using
 ````
 docker run --rm -p 8080:8080 gcr.io/all-projects-292200/coderprabhu-ui:v16
 curl http://localhost:8080
