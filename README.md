@@ -45,7 +45,7 @@ curl https://www.coderprabhu.com
 curl http://api.coderprabhu.com
 curl https://api.coderprabhu.com
 ````   
-
+This behavior is now changed
 kubectl apply -f k8s/coderprabhu-ui-dot-com-cert.yaml
 kubectl describe -f k8s/coderprabhu-ui-dot-com-cert.yaml
 kubectl delete -f k8s/coderprabhu-ui-dot-com-cert.yaml
