@@ -43,7 +43,7 @@ npm run preview    # Preview production build
 
 ## Deployment
 
-Multi-stage Docker build using node:25-alpine for build and nginx:alpine for serving. The build runs tests before creating the production bundle. Container exposes port 8080.
+Multi-stage Docker build using node:24-alpine for build and nginx:alpine for serving. The build runs tests before creating the production bundle. Container exposes port 8080.
 
 Build and push:
 ```bash

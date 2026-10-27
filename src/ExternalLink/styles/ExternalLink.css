@@ -88,9 +88,26 @@
     }
 }
 
-.link-tile:hover {
+.link-tile:hover,
+.link-tile:focus-visible {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.link-tile:focus-visible {
+    outline: 2px solid #61dafb;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .link-tile {
+        transition: none;
+    }
+
+    .link-tile:hover,
+    .link-tile:focus-visible {
+        transform: none;
+    }
 }
 
 .link-tile-icon {
